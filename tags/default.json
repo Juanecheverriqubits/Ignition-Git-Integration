@@ -1,0 +1,423 @@
+{
+  "name": "",
+  "tagType": "Provider",
+  "tags": [
+    {
+      "name": "_Simulator_",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "_Controls_",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "dataType": "Boolean",
+              "name": "Repeat",
+              "opcItemPath": "ns\u003d1;s\u003d[Simulator][Controls]/repeat",
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "valueSource": "opc"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Pause",
+              "opcItemPath": "ns\u003d1;s\u003d[Simulator][Controls]/pause",
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "valueSource": "opc"
+            },
+            {
+              "dataType": "Int8",
+              "name": "Program Counter",
+              "opcItemPath": "ns\u003d1;s\u003d[Simulator][Controls]/programCounter",
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "valueSource": "opc"
+            },
+            {
+              "dataType": "Int8",
+              "name": "Base Rate",
+              "opcItemPath": "ns\u003d1;s\u003d[Simulator][Controls]/baseRateNode",
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "valueSource": "opc"
+            },
+            {
+              "dataType": "Boolean",
+              "name": "Reset",
+              "opcItemPath": "ns\u003d1;s\u003d[Simulator][Controls]/reset",
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "valueSource": "opc"
+            }
+          ]
+        },
+        {
+          "name": "Test",
+          "tagType": "Folder",
+          "tags": [
+            {
+              "dataType": "Float8",
+              "name": "MyTag",
+              "opcItemPath": "ns\u003d1;s\u003d[Simulator]Test/MyTag",
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "valueSource": "opc"
+            },
+            {
+              "dataType": "Float8",
+              "name": "MySineTag",
+              "opcItemPath": "ns\u003d1;s\u003d[Simulator]Test/MySineTag",
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "valueSource": "opc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sensor",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "Sensor 1",
+          "parameters": {
+            "SensorNum": {
+              "dataType": "Float",
+              "value": 1.0
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "testDynamic",
+              "tagType": "AtomicTag",
+              "value": 10
+            },
+            {
+              "name": "MySineTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "sensor"
+        },
+        {
+          "name": "Sensor 3",
+          "parameters": {
+            "SensorNum": {
+              "dataType": "Float",
+              "value": 3.0
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "MySineTag",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "testDynamic",
+              "tagType": "AtomicTag",
+              "value": 10
+            }
+          ],
+          "typeId": "sensor"
+        },
+        {
+          "name": "Sensor 2",
+          "parameters": {
+            "SensorNum": {
+              "dataType": "Float",
+              "value": 2.0
+            }
+          },
+          "tagType": "UdtInstance",
+          "tags": [
+            {
+              "name": "testDynamic",
+              "tagType": "AtomicTag",
+              "value": 10
+            },
+            {
+              "name": "MySineTag",
+              "tagType": "AtomicTag"
+            }
+          ],
+          "typeId": "sensor"
+        }
+      ]
+    },
+    {
+      "name": "Tank 2",
+      "parameters": {
+        "TankNum": {
+          "dataType": "Float",
+          "value": 2.0
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "Liquid",
+          "tagType": "AtomicTag",
+          "value": 81
+        }
+      ],
+      "typeId": "Tank"
+    },
+    {
+      "name": "New Instance",
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "Setpoint",
+          "tagType": "AtomicTag"
+        }
+      ],
+      "typeId": "test1"
+    },
+    {
+      "dataType": "Float8",
+      "historyEnabled": true,
+      "historyProvider": "SQLite",
+      "name": "MyTag",
+      "opcItemPath": "ns\u003d1;s\u003d[Simulator]Test/MyTag",
+      "opcServer": "Ignition OPC UA Server",
+      "tagGroup": "Leased Tag Group",
+      "tagType": "AtomicTag",
+      "valueSource": "opc"
+    },
+    {
+      "name": "Test",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "data",
+          "tagType": "AtomicTag",
+          "value": 100,
+          "valueSource": "memory"
+        },
+        {
+          "name": "Machine state",
+          "tagType": "AtomicTag",
+          "value": 2,
+          "valueSource": "memory"
+        },
+        {
+          "name": "State",
+          "tagType": "AtomicTag",
+          "value": 0,
+          "valueSource": "memory"
+        },
+        {
+          "name": "TestScript",
+          "tagType": "AtomicTag",
+          "value": 8,
+          "valueSource": "memory"
+        }
+      ]
+    },
+    {
+      "name": "status_ref",
+      "sourceTagPath": "[~]MyTag",
+      "tagType": "AtomicTag",
+      "valueSource": "reference"
+    },
+    {
+      "name": "Hi SP",
+      "tagType": "AtomicTag",
+      "value": 95,
+      "valueSource": "memory"
+    },
+    {
+      "name": "Tank 3",
+      "parameters": {
+        "TankNum": {
+          "dataType": "Float",
+          "value": 3.0
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "Liquid",
+          "tagType": "AtomicTag",
+          "value": 37
+        }
+      ],
+      "typeId": "Tank"
+    },
+    {
+      "name": "Tank 1",
+      "parameters": {
+        "TankNum": {
+          "dataType": "Float",
+          "value": 1.0
+        }
+      },
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "Liquid",
+          "tagType": "AtomicTag",
+          "value": 54
+        }
+      ],
+      "typeId": "Tank"
+    },
+    {
+      "name": "lo SP",
+      "tagType": "AtomicTag",
+      "value": 20,
+      "valueSource": "memory"
+    },
+    {
+      "alarms": [
+        {
+          "mode": "BelowValue",
+          "name": "Low Pressure",
+          "priority": "Critical",
+          "setpointA": {
+            "bindType": "Tag",
+            "value": "[~]lo SP"
+          }
+        },
+        {
+          "activePipeline": "myProject/New Pipeline",
+          "mode": "AboveValue",
+          "name": "High Pressure",
+          "priority": "Critical",
+          "setpointA": {
+            "bindType": "Tag",
+            "value": "[~]Hi SP"
+          }
+        }
+      ],
+      "name": "Liquid",
+      "tagType": "AtomicTag",
+      "value": 80,
+      "valueSource": "memory"
+    },
+    {
+      "name": "_types_",
+      "tagType": "Folder",
+      "tags": [
+        {
+          "name": "sensor",
+          "parameters": {
+            "SensorNum": {
+              "dataType": "Float"
+            }
+          },
+          "tagType": "UdtType",
+          "tags": [
+            {
+              "alarms": [
+                {
+                  "displayPath": {
+                    "bindType": "Expression",
+                    "value": "\"Sine \" + {SensorNum} + \" High Sine Value\""
+                  },
+                  "mode": "AboveValue",
+                  "name": "High Sine",
+                  "setpointA": {
+                    "bindType": "Tag",
+                    "value": "[.]testDynamic"
+                  }
+                }
+              ],
+              "dataType": "Float8",
+              "historyEnabled": true,
+              "historyProvider": "SQLite",
+              "name": "MySineTag",
+              "opcItemPath": "ns\u003d1;s\u003d[Simulator]Test/MySineTag",
+              "opcServer": "Ignition OPC UA Server",
+              "tagType": "AtomicTag",
+              "valueSource": "opc"
+            },
+            {
+              "name": "testDynamic",
+              "tagType": "AtomicTag",
+              "value": 9.99,
+              "valueSource": "memory"
+            }
+          ],
+          "typeColor": -12900634
+        },
+        {
+          "name": "Tank",
+          "parameters": {
+            "TankNum": {
+              "dataType": "Float"
+            }
+          },
+          "tagType": "UdtType",
+          "tags": [
+            {
+              "alarms": [
+                {
+                  "mode": "BelowValue",
+                  "name": "Low Pressure",
+                  "priority": "Critical",
+                  "setpointA": {
+                    "bindType": "Tag",
+                    "value": "[~]lo SP"
+                  }
+                },
+                {
+                  "activePipeline": "myProject/New Pipeline",
+                  "mode": "AboveValue",
+                  "name": "High Pressure",
+                  "priority": "Critical",
+                  "setpointA": {
+                    "bindType": "Tag",
+                    "value": "[~]Hi SP"
+                  }
+                }
+              ],
+              "dataType": "Int4",
+              "name": "Liquid",
+              "tagType": "AtomicTag",
+              "value": 50,
+              "valueSource": "memory"
+            }
+          ],
+          "typeColor": -527286
+        },
+        {
+          "name": "test1",
+          "tagType": "UdtType",
+          "tags": [
+            {
+              "name": "Setpoint",
+              "tagType": "AtomicTag",
+              "value": 20,
+              "valueSource": "memory"
+            }
+          ],
+          "typeId": ""
+        }
+      ]
+    },
+    {
+      "alarms": [
+        {
+          "label": "",
+          "mode": "AboveValue",
+          "name": "testAlarm",
+          "priority": "Critical",
+          "setpointA": 10.0
+        }
+      ],
+      "dataType": "Float8",
+      "name": "MySineTag",
+      "opcItemPath": "ns\u003d1;s\u003d[Simulator]Test/MySineTag",
+      "opcServer": "Ignition OPC UA Server",
+      "scaleMode": "Off",
+      "tagGroup": "My Tag Group",
+      "tagType": "AtomicTag",
+      "valueSource": "opc"
+    }
+  ]
+}
