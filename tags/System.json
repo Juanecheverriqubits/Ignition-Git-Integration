@@ -19,7 +19,11 @@
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "QueriesPerSecond",
+                  "name": "ActiveConnections",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ConnectionSaturation",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -27,11 +31,7 @@
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "ActiveConnections",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "ConnectionSaturation",
+                  "name": "QueriesPerSecond",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -45,7 +45,7 @@
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "ConnectionSaturation",
+                  "name": "AvgQueryTime",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -53,7 +53,11 @@
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "AvgQueryTime",
+                  "name": "ConnectionSaturation",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "ActiveConnections",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -62,10 +66,6 @@
                 },
                 {
                   "name": "AvailableThroughFailover",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "ActiveConnections",
                   "tagType": "AtomicTag"
                 }
               ]
@@ -75,15 +75,15 @@
               "tagType": "Folder",
               "tags": [
                 {
+                  "name": "ConnectionSaturation",
+                  "tagType": "AtomicTag"
+                },
+                {
                   "name": "AvgQueryTime",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "ActiveConnections",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "ConnectionSaturation",
+                  "name": "Available",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -91,20 +91,16 @@
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "AvailableThroughFailover",
+                  "name": "ActiveConnections",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "Available",
+                  "name": "AvailableThroughFailover",
                   "tagType": "AtomicTag"
                 }
               ]
             }
           ]
-        },
-        {
-          "name": "SystemName",
-          "tagType": "AtomicTag"
         },
         {
           "name": "StoreAndForward",
@@ -119,6 +115,22 @@
                   "tagType": "Folder",
                   "tags": [
                     {
+                      "name": "DroppedRecords",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "CanQuarantine",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "IsStore",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Available",
+                      "tagType": "AtomicTag"
+                    },
+                    {
                       "name": "MaxRecords",
                       "tagType": "AtomicTag"
                     },
@@ -127,27 +139,15 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "IsStore",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "CanQuarantine",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "PendingRecords",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "ForwardMetrics",
                       "tagType": "Folder",
                       "tags": [
                         {
-                          "name": "AverageDuration",
+                          "name": "Total",
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "Throughput",
+                          "name": "AverageDuration",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -155,7 +155,7 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "Total",
+                          "name": "Throughput",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -173,6 +173,10 @@
                       "tagType": "Folder",
                       "tags": [
                         {
+                          "name": "Throughput",
+                          "tagType": "AtomicTag"
+                        },
+                        {
                           "name": "Total",
                           "tagType": "AtomicTag"
                         },
@@ -181,7 +185,7 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "TimeUnit",
+                          "name": "MinDuration",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -189,36 +193,16 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "Throughput",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinDuration",
+                          "name": "TimeUnit",
                           "tagType": "AtomicTag"
                         }
                       ]
-                    },
-                    {
-                      "name": "Available",
-                      "tagType": "AtomicTag"
                     },
                     {
                       "name": "TakeMetrics",
                       "tagType": "Folder",
                       "tags": [
                         {
-                          "name": "MaxDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Throughput",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Total",
-                          "tagType": "AtomicTag"
-                        },
-                        {
                           "name": "AverageDuration",
                           "tagType": "AtomicTag"
                         },
@@ -229,11 +213,23 @@
                         {
                           "name": "TimeUnit",
                           "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MaxDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Throughput",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Total",
+                          "tagType": "AtomicTag"
                         }
                       ]
                     },
                     {
-                      "name": "DroppedRecords",
+                      "name": "PendingRecords",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -243,11 +239,7 @@
                   "tagType": "Folder",
                   "tags": [
                     {
-                      "name": "QuarantinedRecords",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "DroppedRecords",
+                      "name": "Available",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -255,15 +247,11 @@
                       "tagType": "Folder",
                       "tags": [
                         {
+                          "name": "MinDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
                           "name": "Throughput",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "TimeUnit",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MaxDuration",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -271,17 +259,29 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "MinDuration",
+                          "name": "AverageDuration",
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "AverageDuration",
+                          "name": "MaxDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "TimeUnit",
                           "tagType": "AtomicTag"
                         }
                       ]
                     },
                     {
-                      "name": "MaxRecords",
+                      "name": "IsStore",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "DroppedRecords",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "PendingRecords",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -289,11 +289,11 @@
                       "tagType": "Folder",
                       "tags": [
                         {
-                          "name": "Throughput",
+                          "name": "AverageDuration",
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "MaxDuration",
+                          "name": "Throughput",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -305,17 +305,21 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "TimeUnit",
+                          "name": "MaxDuration",
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "AverageDuration",
+                          "name": "TimeUnit",
                           "tagType": "AtomicTag"
                         }
                       ]
                     },
                     {
-                      "name": "PendingRecords",
+                      "name": "QuarantinedRecords",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "CanQuarantine",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -327,11 +331,15 @@
                           "tagType": "AtomicTag"
                         },
                         {
+                          "name": "MaxDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
                           "name": "TimeUnit",
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "MaxDuration",
+                          "name": "MinDuration",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -341,23 +349,11 @@
                         {
                           "name": "Total",
                           "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinDuration",
-                          "tagType": "AtomicTag"
                         }
                       ]
                     },
                     {
-                      "name": "Available",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "IsStore",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "CanQuarantine",
+                      "name": "MaxRecords",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -379,11 +375,11 @@
                   "tagType": "Folder",
                   "tags": [
                     {
-                      "name": "Available",
+                      "name": "IsStore",
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "IsStore",
+                      "name": "Available",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -399,17 +395,13 @@
                   "tagType": "Folder",
                   "tags": [
                     {
-                      "name": "PendingRecords",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "QuarantinedRecords",
-                      "tagType": "AtomicTag"
-                    },
-                    {
                       "name": "ForwardMetrics",
                       "tagType": "Folder",
                       "tags": [
+                        {
+                          "name": "Throughput",
+                          "tagType": "AtomicTag"
+                        },
                         {
                           "name": "MaxDuration",
                           "tagType": "AtomicTag"
@@ -419,29 +411,21 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "TimeUnit",
+                          "name": "AverageDuration",
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "AverageDuration",
+                          "name": "TimeUnit",
                           "tagType": "AtomicTag"
                         },
                         {
                           "name": "MinDuration",
                           "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Throughput",
-                          "tagType": "AtomicTag"
                         }
                       ]
                     },
                     {
-                      "name": "MaxRecords",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "CanQuarantine",
+                      "name": "DroppedRecords",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -449,7 +433,15 @@
                       "tagType": "Folder",
                       "tags": [
                         {
-                          "name": "Total",
+                          "name": "AverageDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MaxDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "TimeUnit",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -461,15 +453,7 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "AverageDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MaxDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "TimeUnit",
+                          "name": "Total",
                           "tagType": "AtomicTag"
                         }
                       ]
@@ -487,10 +471,6 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "Total",
-                          "tagType": "AtomicTag"
-                        },
-                        {
                           "name": "Throughput",
                           "tagType": "AtomicTag"
                         },
@@ -501,25 +481,49 @@
                         {
                           "name": "TimeUnit",
                           "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Total",
+                          "tagType": "AtomicTag"
                         }
                       ]
                     },
                     {
-                      "name": "DroppedRecords",
+                      "name": "QuarantinedRecords",
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Available",
+                      "name": "CanQuarantine",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "MaxRecords",
                       "tagType": "AtomicTag"
                     },
                     {
                       "name": "IsStore",
                       "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "PendingRecords",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "Available",
+                      "tagType": "AtomicTag"
                     }
                   ]
                 },
                 {
+                  "name": "Quarantined",
+                  "tagType": "AtomicTag"
+                },
+                {
                   "name": "Available",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Dropped",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -527,15 +531,7 @@
                   "tagType": "Folder",
                   "tags": [
                     {
-                      "name": "MaxRecords",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "CanQuarantine",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "IsStore",
+                      "name": "Available",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -547,19 +543,19 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "MinDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AverageDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
                           "name": "MaxDuration",
                           "tagType": "AtomicTag"
                         },
                         {
+                          "name": "MinDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
                           "name": "TimeUnit",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AverageDuration",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -573,11 +569,15 @@
                       "tagType": "Folder",
                       "tags": [
                         {
-                          "name": "AverageDuration",
+                          "name": "TimeUnit",
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "MinDuration",
+                          "name": "MaxDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AverageDuration",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -589,17 +589,13 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "MaxDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "TimeUnit",
+                          "name": "MinDuration",
                           "tagType": "AtomicTag"
                         }
                       ]
                     },
                     {
-                      "name": "DroppedRecords",
+                      "name": "CanQuarantine",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -611,15 +607,7 @@
                       "tagType": "Folder",
                       "tags": [
                         {
-                          "name": "MinDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
                           "name": "TimeUnit",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Total",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -627,21 +615,37 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "MaxDuration",
+                          "name": "MinDuration",
                           "tagType": "AtomicTag"
                         },
                         {
                           "name": "Throughput",
                           "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Total",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MaxDuration",
+                          "tagType": "AtomicTag"
                         }
                       ]
+                    },
+                    {
+                      "name": "MaxRecords",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "DroppedRecords",
+                      "tagType": "AtomicTag"
                     },
                     {
                       "name": "PendingRecords",
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Available",
+                      "name": "IsStore",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -651,22 +655,14 @@
                   "tagType": "Folder",
                   "tags": [
                     {
-                      "name": "Available",
+                      "name": "IsStore",
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "IsStore",
+                      "name": "Available",
                       "tagType": "AtomicTag"
                     }
                   ]
-                },
-                {
-                  "name": "Dropped",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Quarantined",
-                  "tagType": "AtomicTag"
                 }
               ]
             },
@@ -675,15 +671,11 @@
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "Available",
+                  "name": "Quarantined",
                   "tagType": "AtomicTag"
                 },
                 {
                   "name": "Dropped",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Quarantined",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -699,6 +691,10 @@
                       "tagType": "AtomicTag"
                     }
                   ]
+                },
+                {
+                  "name": "Available",
+                  "tagType": "AtomicTag"
                 }
               ]
             },
@@ -715,15 +711,7 @@
                       "tagType": "Folder",
                       "tags": [
                         {
-                          "name": "MinDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
                           "name": "AverageDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MaxDuration",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -731,49 +719,19 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "TimeUnit",
-                          "tagType": "AtomicTag"
-                        },
-                        {
                           "name": "Total",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "MaxRecords",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "CanQuarantine",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "TakeMetrics",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "MaxDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Throughput",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AverageDuration",
                           "tagType": "AtomicTag"
                         },
                         {
                           "name": "TimeUnit",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Total",
                           "tagType": "AtomicTag"
                         },
                         {
                           "name": "MinDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MaxDuration",
                           "tagType": "AtomicTag"
                         }
                       ]
@@ -783,11 +741,23 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "QuarantinedRecords",
+                      "name": "Available",
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "ForwardMetrics",
+                      "name": "PendingRecords",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "CanQuarantine",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "DroppedRecords",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "TakeMetrics",
                       "tagType": "Folder",
                       "tags": [
                         {
@@ -795,9 +765,31 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "Throughput",
+                          "name": "TimeUnit",
                           "tagType": "AtomicTag"
                         },
+                        {
+                          "name": "MaxDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MinDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AverageDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Throughput",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ForwardMetrics",
+                      "tagType": "Folder",
+                      "tags": [
                         {
                           "name": "MaxDuration",
                           "tagType": "AtomicTag"
@@ -807,25 +799,29 @@
                           "tagType": "AtomicTag"
                         },
                         {
+                          "name": "TimeUnit",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Total",
+                          "tagType": "AtomicTag"
+                        },
+                        {
                           "name": "MinDuration",
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "TimeUnit",
+                          "name": "Throughput",
                           "tagType": "AtomicTag"
                         }
                       ]
                     },
                     {
-                      "name": "PendingRecords",
+                      "name": "MaxRecords",
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "DroppedRecords",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Available",
+                      "name": "QuarantinedRecords",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -835,7 +831,7 @@
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "Quarantined",
+                  "name": "Available",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -843,11 +839,11 @@
                   "tagType": "Folder",
                   "tags": [
                     {
-                      "name": "Available",
+                      "name": "IsStore",
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "IsStore",
+                      "name": "Available",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -857,15 +853,7 @@
                   "tagType": "Folder",
                   "tags": [
                     {
-                      "name": "QuarantinedRecords",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "Available",
-                      "tagType": "AtomicTag"
-                    },
-                    {
-                      "name": "IsStore",
+                      "name": "PendingRecords",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -873,7 +861,7 @@
                       "tagType": "Folder",
                       "tags": [
                         {
-                          "name": "Total",
+                          "name": "AverageDuration",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -881,7 +869,11 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "AverageDuration",
+                          "name": "TimeUnit",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "MaxDuration",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -889,17 +881,13 @@
                           "tagType": "AtomicTag"
                         },
                         {
-                          "name": "TimeUnit",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MaxDuration",
+                          "name": "Total",
                           "tagType": "AtomicTag"
                         }
                       ]
                     },
                     {
-                      "name": "PendingRecords",
+                      "name": "CanQuarantine",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -907,15 +895,11 @@
                       "tagType": "Folder",
                       "tags": [
                         {
-                          "name": "TimeUnit",
+                          "name": "MinDuration",
                           "tagType": "AtomicTag"
                         },
                         {
                           "name": "MaxDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AverageDuration",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -924,6 +908,48 @@
                         },
                         {
                           "name": "Throughput",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AverageDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "TimeUnit",
+                          "tagType": "AtomicTag"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Available",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "QuarantinedRecords",
+                      "tagType": "AtomicTag"
+                    },
+                    {
+                      "name": "StorageMetrics",
+                      "tagType": "Folder",
+                      "tags": [
+                        {
+                          "name": "MaxDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Total",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "AverageDuration",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "Throughput",
+                          "tagType": "AtomicTag"
+                        },
+                        {
+                          "name": "TimeUnit",
                           "tagType": "AtomicTag"
                         },
                         {
@@ -937,37 +963,7 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "StorageMetrics",
-                      "tagType": "Folder",
-                      "tags": [
-                        {
-                          "name": "Total",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MinDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "AverageDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "MaxDuration",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "Throughput",
-                          "tagType": "AtomicTag"
-                        },
-                        {
-                          "name": "TimeUnit",
-                          "tagType": "AtomicTag"
-                        }
-                      ]
-                    },
-                    {
-                      "name": "CanQuarantine",
+                      "name": "IsStore",
                       "tagType": "AtomicTag"
                     },
                     {
@@ -977,7 +973,7 @@
                   ]
                 },
                 {
-                  "name": "Available",
+                  "name": "Quarantined",
                   "tagType": "AtomicTag"
                 }
               ]
@@ -995,15 +991,23 @@
           ]
         },
         {
+          "name": "UptimeSeconds",
+          "tagType": "AtomicTag"
+        },
+        {
           "name": "Redundancy",
           "tagType": "Folder",
           "tags": [
             {
-              "name": "ActivityLevel",
+              "name": "Role",
               "tagType": "AtomicTag"
             },
             {
-              "name": "Role",
+              "name": "IsActive",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "IsMaster",
               "tagType": "AtomicTag"
             },
             {
@@ -1011,21 +1015,17 @@
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "IsConnected",
+                  "name": "PeerId",
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "PeerId",
+                  "name": "IsConnected",
                   "tagType": "AtomicTag"
                 }
               ]
             },
             {
-              "name": "IsMaster",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "IsActive",
+              "name": "ActivityLevel",
               "tagType": "AtomicTag"
             }
           ]
@@ -1035,15 +1035,7 @@
           "tagType": "Folder",
           "tags": [
             {
-              "name": "Memory Utilization",
-              "tagType": "AtomicTag"
-            },
-            {
               "name": "Max Memory",
-              "tagType": "AtomicTag"
-            },
-            {
-              "name": "Available Disk Space (MB)",
               "tagType": "AtomicTag"
             },
             {
@@ -1051,21 +1043,33 @@
               "tagType": "AtomicTag"
             },
             {
-              "name": "Memory Usage",
+              "name": "Available Disk Space (MB)",
+              "tagType": "AtomicTag"
+            },
+            {
+              "name": "Memory Utilization",
               "tagType": "AtomicTag"
             },
             {
               "name": "CPU Usage",
               "tagType": "AtomicTag"
+            },
+            {
+              "name": "Memory Usage",
+              "tagType": "AtomicTag"
             }
           ]
         },
         {
-          "name": "LicenseState",
+          "name": "Timezone",
           "tagType": "AtomicTag"
         },
         {
-          "name": "Timezone",
+          "name": "SystemName",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "LicenseState",
           "tagType": "AtomicTag"
         },
         {
@@ -1077,7 +1081,11 @@
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "Name",
+                  "name": "Status",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Description",
                   "tagType": "AtomicTag"
                 },
                 {
@@ -1085,11 +1093,7 @@
                   "tagType": "AtomicTag"
                 },
                 {
-                  "name": "Status",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Description",
+                  "name": "Name",
                   "tagType": "AtomicTag"
                 }
               ]
@@ -1099,10 +1103,6 @@
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "Status",
-                  "tagType": "AtomicTag"
-                },
-                {
                   "name": "Name",
                   "tagType": "AtomicTag"
                 },
@@ -1112,6 +1112,10 @@
                 },
                 {
                   "name": "Description",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Status",
                   "tagType": "AtomicTag"
                 }
               ]
@@ -1121,19 +1125,19 @@
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "Name",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Enabled",
-                  "tagType": "AtomicTag"
-                },
-                {
                   "name": "Description",
                   "tagType": "AtomicTag"
                 },
                 {
                   "name": "Status",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Name",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Enabled",
                   "tagType": "AtomicTag"
                 }
               ]
@@ -1143,6 +1147,10 @@
               "tagType": "Folder",
               "tags": [
                 {
+                  "name": "Enabled",
+                  "tagType": "AtomicTag"
+                },
+                {
                   "name": "Description",
                   "tagType": "AtomicTag"
                 },
@@ -1152,10 +1160,6 @@
                 },
                 {
                   "name": "Name",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Enabled",
                   "tagType": "AtomicTag"
                 }
               ]
@@ -1165,19 +1169,19 @@
               "tagType": "Folder",
               "tags": [
                 {
-                  "name": "Name",
-                  "tagType": "AtomicTag"
-                },
-                {
-                  "name": "Status",
-                  "tagType": "AtomicTag"
-                },
-                {
                   "name": "Description",
                   "tagType": "AtomicTag"
                 },
                 {
+                  "name": "Name",
+                  "tagType": "AtomicTag"
+                },
+                {
                   "name": "Enabled",
+                  "tagType": "AtomicTag"
+                },
+                {
+                  "name": "Status",
                   "tagType": "AtomicTag"
                 }
               ]
@@ -1201,11 +1205,11 @@
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "Enabled",
+                      "name": "State",
                       "tagType": "AtomicTag"
                     },
                     {
-                      "name": "State",
+                      "name": "Enabled",
                       "tagType": "AtomicTag"
                     }
                   ]
@@ -1215,19 +1219,15 @@
           ]
         },
         {
-          "name": "CurrentDateTime",
-          "tagType": "AtomicTag"
-        },
-        {
           "name": "Alarming",
           "tagType": "Folder",
           "tags": [
             {
-              "name": "Clear and Acked",
+              "name": "Active and Unacked",
               "tagType": "AtomicTag"
             },
             {
-              "name": "Active and Unacked",
+              "name": "Clear and Unacked",
               "tagType": "AtomicTag"
             },
             {
@@ -1235,13 +1235,13 @@
               "tagType": "AtomicTag"
             },
             {
-              "name": "Clear and Unacked",
+              "name": "Clear and Acked",
               "tagType": "AtomicTag"
             }
           ]
         },
         {
-          "name": "UptimeSeconds",
+          "name": "CurrentDateTime",
           "tagType": "AtomicTag"
         }
       ]
