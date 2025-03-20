@@ -12,7 +12,7 @@
           "basis": "32px"
         },
         "props": {
-          "text": "Designer pull 3"
+          "text": "Designer push"
         },
         "type": "ia.display.label"
       }
