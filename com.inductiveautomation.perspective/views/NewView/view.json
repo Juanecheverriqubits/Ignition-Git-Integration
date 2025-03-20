@@ -12,7 +12,7 @@
           "basis": "32px"
         },
         "props": {
-          "text": "Label"
+          "text": "Designer push"
         },
         "type": "ia.display.label"
       }
