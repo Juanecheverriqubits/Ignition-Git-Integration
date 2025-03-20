@@ -4,7 +4,7 @@
   "props": {},
   "root": {
     "meta": {
-      "name": "root"
+      "name": "testroot"
     },
     "props": {
       "direction": "column"
