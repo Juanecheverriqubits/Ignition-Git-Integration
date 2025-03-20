@@ -12,7 +12,7 @@
           "basis": "32px"
         },
         "props": {
-          "text": "pull"
+          "text": "Label"
         },
         "type": "ia.display.label"
       }
