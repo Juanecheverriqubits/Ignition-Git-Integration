@@ -1,6 +1,7 @@
 {
-  "title": "",
+  "title": "TestProject",
   "description": "",
+  "parent": "",
   "enabled": true,
   "inheritable": false
 }
