@@ -12,11 +12,7 @@
           "basis": "32px"
         },
         "props": {
-<<<<<<< HEAD
-          "text": "Designer pull 16"
-=======
-          "text": "Designer pull 19"
->>>>>>> branch 'master' of git@github.com:Juanecheverriqubits/Ignition-Git-Integration.git
+          "text": "Designer pull 20"
         },
         "type": "ia.display.label"
       }
