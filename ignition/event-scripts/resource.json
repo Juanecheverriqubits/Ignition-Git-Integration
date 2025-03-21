@@ -1,5 +1,5 @@
 {
-  "scope": "A",
+  "scope": "G",
   "version": 1,
   "restricted": false,
   "overridable": true,
@@ -9,8 +9,8 @@
   "attributes": {
     "lastModification": {
       "actor": "admin",
-      "timestamp": "2025-03-21T13:46:20Z"
+      "timestamp": "2025-03-21T14:22:19Z"
     },
-    "lastModificationSignature": "62c7cdfc3b5df6752978430e49f20e8f393b0fb44ea158a25aed6747c91dc5e0"
+    "lastModificationSignature": "a23feccd101efb07e23167c1d000703ee60747c93db096ea8dbcdbda49bde3de"
   }
 }
